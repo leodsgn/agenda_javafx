@@ -56,9 +56,6 @@ public class FileResolver {
                     String attrs[] = line.split(DELIMITER);
                     Person p = new Person(attrs[0], attrs[1], attrs[2], attrs[3], attrs[4], attrs[5]);
 
-                    System.out.println("nome: " + p.getName());
-                    System.out.println("telefone: " + p.getPhone());
-
                     personList.add(
                             new Person(attrs[0], attrs[1], attrs[2], attrs[3], attrs[4], attrs[5])
                     );
@@ -66,7 +63,6 @@ public class FileResolver {
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
-            System.out.println(personList.toString());
             return personList;
         }
         return null;
